@@ -1,0 +1,1 @@
+set(ThirdPartyLibrary_VERSION 1.0)
