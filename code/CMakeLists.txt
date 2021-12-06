@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 # Specify the project the used language and the version
 project(ExampleProject VERSION 0.1 LANGUAGES CXX)
 
-# Set CMake to enforce C++14
+# Set CMake to enforce C++11/14/17/20
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED 14)
 
@@ -16,7 +16,7 @@ include(GNUInstallDirs)
 
 # Find boost and make IMPORTED boost targets available
 find_package(Boost REQUIRED COMPONENTS date_time filesystem)
-# Communicate to the use, that boost was found and which version he is used
+# Communicate to the user, that boost was found and which version is used
 message(STATUS "Boost found version: ${Boost_VERSION}")
 
 # Find the local third party library

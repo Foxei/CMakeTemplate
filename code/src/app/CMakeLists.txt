@@ -1,0 +1,3 @@
+add_executable(example_executable src/example_executable.cpp)
+
+target_link_libraries(example_executable example_project)
