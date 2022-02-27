@@ -1,5 +1,5 @@
 ![Repository Logo](https://repository-images.githubusercontent.com/229826175/186ab32c-c0a1-49f0-90d6-2c64faa5b385)
-# This Repository
+# Modern CMake Templates
 
 In this repository you will find a CMake template that covers all common use cases of CMake. Just copy the repository, add your C++ code and you're ready to go. In addition, there is a detailed guide on how to use CMake and how to structure a project.
 
@@ -13,8 +13,15 @@ Even though the guide was written in 2015, many of the CMake scripts I have come
 
 Most of the problems that programmers have with CMake can be traced directly back to the developers of the library that the user wants to use. Poor documentation requiring in-depth knowledge of CMake, inconsistent naming of variable, outdated CMake scripts are common causes of frustration. The old mantras "never change a running system", "maintain backwards compatability" or simply "it works why bother" should not be used as an excuse not to update a CMake script. 
 
-![CMake Meme](https://i.redd.it/ijfq47povp781.png)
+Most developers answer the question about a new CMake script with:
+
+![CMake Meme](https://memegenerator.net/img/instances/62346306.jpg)
+
+My answer is: Yes! Yes you do.
+
 
 ## What does this Repository contain?
 
 In this repository you will find a CMake template that covers all common use cases of CMake. Just copy the repository, add your C++ code and you're ready to go. In addition, there is a detailed guide on how to use CMake and how to structure a project. In addition, each CMake script contains detailed comments about the individual commands.
+
+
