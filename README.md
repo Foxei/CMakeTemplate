@@ -15,4 +15,6 @@ Most of the problems that programmers have with CMake can be traced directly bac
 
 ![CMake Meme](https://i.redd.it/ijfq47povp781.png)
 
-# 
+## What does this Repository contain?
+
+In this repository you will find a CMake template that covers all common use cases of CMake. Just copy the repository, add your C++ code and you're ready to go. In addition, there is a detailed guide on how to use CMake and how to structure a project. In addition, each CMake script contains detailed comments about the individual commands.
