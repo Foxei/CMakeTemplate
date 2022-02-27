@@ -65,3 +65,9 @@ Let's look at the structure using the example of a dice. The library provides th
         └── src
             └── dice_tests.cpp
 ```
+
+Perhaps you are now asking yourself why the Dice Class is not simply linked against dice_cli and the tests but is outsourced as a library. The answer is **scalability** and **maintainability**.
+
+On the subject of **maintainability**. Imagine you have made a mistake in the Dice class and the distribution of possible eyes is not even. If you now want to correct this error, you only change something in the Dice.cpp but not in the Dice.hpp. This makes it possible to replace the libdice.so (the dynamic library) without having to compile the project from scratch. Replacing the library is then recognised by the operating system and fixes both the dice_cli and the dice_tests. In the dice example, such a procedure may not seem necessary since the application is comparatively small, but it is in the nature of programs to grow very quickly. So get it right from the start to save yourself work later on.
+
+**Scalability** is the second reason why functionality is outsourced to a library. Now imagine that your boss wants to have a dice_ui that displays a small ui in addition to the dice_cli. Without a library, the Dice class would have to be compiled into the application by two people. This makes your software not only larger than necessary, but also more difficult to maintain because you have to fix the bug with the incorrect probabilities in three applications and not just in one library. Thus, the number of different applications automatically reduces maintainability. Poor scalability reduces maintainability!
