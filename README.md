@@ -24,4 +24,44 @@ My answer is: Yes! Yes you do.
 
 In this repository you will find a CMake template that covers all common use cases of CMake. Just copy the repository, add your C++ code and you're ready to go. In addition, there is a detailed guide on how to use CMake and how to structure a project. In addition, each CMake script contains detailed comments about the individual commands.
 
+# Instruction on Modern CMake
 
+Here you will find detailed instructions for modern CMake projects.
+
+# Structure
+
+A well-written C++ application can be divided into three parts.
+- A library that represents all relevant and reusable functionalities.
+- One or more tools that use this library. 
+- A set of unit tests that ensure that the library works correctly.
+We find the structure identical in our folder structure. 
+
+```
+└── src 
+    ├── tools
+    │   └── src
+    ├── library 
+    │   ├── include
+    │   └── src
+    └── test
+        └── src
+```
+
+An attentive reader may now ask why the library has an `include` directory and the other applications do not. The reason is identical to the private and public keywords in every known programming language: encapsulation. We do not want the user of our library to have access to internal header files. We only want them to have access to interface. The `include` directory is, so to speak, the public part of our code. All files in the `src` directories are installed as binary only and are therefore the private part of our application. It is important to note that the public header files cannot see the private header files.
+
+Let's look at the structure using the example of a dice. The library provides the functionality to create an n-sided dice. The tool provides a CLI interface to roll a dice and the tests ensure that the dice always provides a correct results. An exemplary structure could look like this:
+
+```
+└── src 
+    ├── tools
+    │   └── src
+    │       └── dice_cli_main.cpp
+    ├── library 
+    │   ├── include
+    │   │   └── Dice.hpp
+    │   └── src
+    │       └── Dice.cpp
+    └── test
+        └── src
+            └── dice_tests.cpp
+```
