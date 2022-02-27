@@ -1,3 +1,4 @@
+![Repository Logo](https://repository-images.githubusercontent.com/229826175/186ab32c-c0a1-49f0-90d6-2c64faa5b385)
 # This Repository
 
 In this repository you will find a CMake template that covers all common use cases of CMake. Just copy the repository, add your C++ code and you're ready to go. In addition, there is a detailed guide on how to use CMake and how to structure a project.
