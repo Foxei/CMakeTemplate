@@ -1,0 +1,17 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/resources">
+        <file>application_style.qss</file>
+        <file>logo.png</file>
+        <file>background.svg</file>
+        <file>icons/chevron-up.svg</file>
+        <file>icons/chevron-up-disabled.svg</file>
+        <file>icons/chevron-up-pressed.svg</file>
+        <file>icons/chevron-down.svg</file>
+        <file>icons/chevron-down-disabled.svg</file>
+        <file>icons/chevron-down-pressed.svg</file>
+        <file>icons/x.svg</file>
+        <file>icons/minus.svg</file>
+        <file>icons/maximize.svg</file>
+        <file>icons/minimize.svg</file>
+    </qresource>
+</RCC>

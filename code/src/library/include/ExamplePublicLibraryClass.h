@@ -11,6 +11,9 @@ class ExamplePublicLibraryClass {
   ExamplePublicLibraryClass();
 
   void printInPublicClass(const std::string &message);
+
+  std::string getSuperSecretMessage() const;
+
 };
 
 #endif //EXAMPLEPUBLICLIBRARYCLASS_H_

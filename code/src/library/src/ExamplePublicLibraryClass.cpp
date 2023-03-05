@@ -8,3 +8,8 @@ void ExamplePublicLibraryClass::printInPublicClass(const std::string &message) {
 
 ExamplePublicLibraryClass::ExamplePublicLibraryClass() : message_prefix_(
     "[ExamplePublicLibraryClass]") {}
+
+std::string ExamplePublicLibraryClass::getSuperSecretMessage() const {
+  ExamplePrivateLibraryClass private_class;
+  return private_class.getSuperSecretMessageWithPrefix(this->message_prefix_);
+}

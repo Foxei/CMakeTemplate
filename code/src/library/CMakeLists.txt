@@ -1,10 +1,10 @@
-# Define library as separate project but depending on the libraries found in
-# the top-level file
+# Define the library as separate project but it may is depending on the
+# libraries found in the top-level file. Be aware how 
 project(libexample_project VERSION 0.1 LANGUAGES CXX)
 
 # Crate the library. Only provide source files here! Header are sorted
 # separately.
-add_library(example_project
+add_library(example_project SHARED
         src/ExamplePublicLibraryClass.cpp
         src/ExamplePrivateLibraryClass.cpp)
 
@@ -15,12 +15,14 @@ target_include_directories(example_project PUBLIC
         $<INSTALL_INTERFACE:include>
         PRIVATE src)
 
-# If we have compiler requirements for this library, list them here
+# If we have compiler special requirements for this library, list them here
 target_compile_features(example_project
         PUBLIC cxx_auto_type
         PRIVATE cxx_variadic_templates)
 
-# Depend on a library that we defined in the top-level file
+# This library is depend on a library that we defined in the top-level file.
+# Link it here! This link will automatically include the headers for us if
+# the linked library supports it 
 target_link_libraries(example_project Boost::boost)
 
 # 'make install' to the correct locations (provided by GNUInstallDirs).

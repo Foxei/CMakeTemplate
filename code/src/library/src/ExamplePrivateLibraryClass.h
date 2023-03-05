@@ -11,6 +11,9 @@ class ExamplePrivateLibraryClass {
   ExamplePrivateLibraryClass();
 
   void printInPrivateClass(const std::string &message);
+
+  std::string getSuperSecretMessageWithPrefix(const std::string &prefix);
+
 };
 
 #endif //EXAMPLEPRIVATELIBRARYCLASS_H_
